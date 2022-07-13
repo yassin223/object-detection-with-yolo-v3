@@ -8,7 +8,7 @@ classes = []
 with open('coco.names', 'r') as f:
     classes = f.read().splitlines()
 
-cap = cv2.VideoCapture(0) # (0) - webcam mte3ek - (1) - webcam secondaire - ("video.... .mp4") - ken 3andek video
+cap = cv2.VideoCapture(0) # (0) for your webcam - (1) if you have a second webcam - ("video.... .mp4") - if you have a video
 
 while True:
     frame, img = cap.read()
@@ -56,7 +56,7 @@ while True:
     # cv2.imshow(str(n), img_blob)
     cv2.imshow("image", img)
     #cv2.waitKey(1)
-    key = cv2.waitKey(1) # ken te5dem 3ala video - (1) - ken te5dem 3ala image (0)
+    key = cv2.waitKey(1) 
     if key == 27 or key ==113:
         break
 cap.release()
